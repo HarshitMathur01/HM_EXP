@@ -76,10 +76,18 @@ python src/train.py trainer.max_epochs=20 data.batch_size=64
 
 ## To Visualise in Voxel51
 
--  Open notebooks -> voxel_analysis.ipynb notebook.
+-  Open **notebooks/voxel_analysis.ipynb** notebook.
 -  Modify paths of image and masks paths.
 -  Run the cell with :
 ```bash
 view = dataset.sort_by("iou", reverse=True)
 session = fo.launch_app(view , port = 5051)
 ```
+
+## For Analysis in Neptune
+-  Open **configs/logger/neptune.yaml** file.
+-  Enter your api key.
+-  Run the models.
+-  Open Neptune, loggings will be there.
+-  To change the name of experiment , open **configs/experiment/building_seg.yaml** file and modefy the "experiment_name".
+
