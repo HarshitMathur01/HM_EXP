@@ -72,3 +72,14 @@ You can override any parameter from command line like this
 ```bash
 python src/train.py trainer.max_epochs=20 data.batch_size=64
 ```
+
+
+## To Visualise in Voxel51
+
+-  Open notebooks -> voxel_analysis.ipynb notebook.
+-  Modify paths of image and masks paths.
+-  Run the cell with :
+```bash
+view = dataset.sort_by("iou", reverse=True)
+session = fo.launch_app(view , port = 5051)
+```
